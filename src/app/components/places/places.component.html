@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <a class="btn btn-primary" routerLink="">Go Back</a>
+  </div>
+  <hr>
+  <table class="table table-bordered table-inverse">
+    <tr>
+      <th>Title</th>
+      <th>Address</th>
+    </tr>
+    <tr *ngFor="let item of places.results.items">
+      <td>
+        {{item.title}}
+      </td>
+      <td>
+        {{item.vicinity}}
+      </td>
+    </tr>
+  </table>
+</div>

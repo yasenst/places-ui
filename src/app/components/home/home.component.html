@@ -1,0 +1,24 @@
+<div class="container">
+  <form [formGroup]="placesForm" #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="form-group">
+      <label>Where are you at?</label>
+      <select class="form-control" formControlName="location" required>
+        <option *ngFor="let m of cities"
+                [value]="m">
+          {{m}}
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>What are you looking for?</label>
+      <select class="form-control" formControlName="category" required>
+        <option *ngFor="let n of categories"
+                [value]="n">
+          {{n}}
+        </option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" >Submit</button>
+  </form>
+</div>
